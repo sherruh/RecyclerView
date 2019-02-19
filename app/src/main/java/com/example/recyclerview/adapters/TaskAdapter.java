@@ -8,9 +8,18 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.recyclerview.R;
+import com.example.recyclerview.models.Task;
 import com.example.recyclerview.viewholders.TaskViewHolder;
 
+import java.util.List;
+
 public class TaskAdapter extends RecyclerView.Adapter<TaskViewHolder> {
+
+    private List<Task> tasks;
+
+    public TaskAdapter(List<Task> list){
+        tasks=list;
+    }
 
     @NonNull
     @Override
@@ -26,12 +35,16 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull TaskViewHolder taskViewHolder, int i) {
-        taskViewHolder.onBind("DEFAULT TEXT");
+        if(i==tasks.size()-1){
+            i=0;
+        }
+
+        taskViewHolder.onBind(tasks.get(i));
         Log.d("ololo","onBind "+i);
     }
 
     @Override
     public int getItemCount() {
-        return 10;
+        return tasks.size();
     }
 }

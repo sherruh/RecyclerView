@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.recyclerview.R;
+import com.example.recyclerview.models.Task;
 
 public class TaskViewHolder extends RecyclerView.ViewHolder {
 
@@ -16,7 +17,7 @@ public class TaskViewHolder extends RecyclerView.ViewHolder {
         title=itemView.findViewById(R.id.vh_task_Title);
     }
 
-    public void onBind(String strTitle){
-        title.setText(strTitle);
+    public void onBind(Task task){
+        title.setText(task.getTitle());
     }
 }
