@@ -17,9 +17,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskViewHolder> {
 
     private List<Task> tasks;
 
+
+
     public TaskAdapter(List<Task> list){
         tasks=list;
     }
+
 
     @NonNull
     @Override
@@ -35,16 +38,16 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull TaskViewHolder taskViewHolder, int i) {
-        if(i==tasks.size()-1){
-            i=0;
-        }
 
+        if(i>=tasks.size()-1){
+            i=i%tasks.size();
+        }
         taskViewHolder.onBind(tasks.get(i));
         Log.d("ololo","onBind "+i);
     }
 
     @Override
     public int getItemCount() {
-        return tasks.size();
+        return tasks.size()*99999;
     }
 }
