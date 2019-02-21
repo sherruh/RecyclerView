@@ -31,23 +31,23 @@ public class MainActivity extends AppCompatActivity {
 
     List<Task> setTasks(){
         List<Task> tasks=new ArrayList<>();
-        tasks.add(new Task("Task 1"));
-        tasks.add(new Task("Task 2"));
-        tasks.add(new Task("Task 3"));
-        tasks.add(new Task("Task 4"));
-        tasks.add(new Task("Task 5"));
-        tasks.add(new Task("Task 6"));
-        tasks.add(new Task("Task 7"));
-        tasks.add(new Task("Task 8"));
-        tasks.add(new Task("Task 9"));
-        tasks.add(new Task("Task 10"));
-        tasks.add(new Task("Task 11"));
-        tasks.add(new Task("Task 12"));
-        tasks.add(new Task("Task 13"));
-        tasks.add(new Task("Task 14"));
-        tasks.add(new Task("Task 15"));
-        tasks.add(new Task("Task 16"));
-        tasks.add(new Task("Task 17"));
+        tasks.add(new Task("Task 1","Text of this task"));
+        tasks.add(new Task("Task 2","Text of this task"));
+        tasks.add(new Task("Task 3","Text of this task"));
+        tasks.add(new Task("Task 4","Text of this task"));
+        tasks.add(new Task("Task 5","Text of this task"));
+        tasks.add(new Task("Task 6","Text of this task"));
+        tasks.add(new Task("Task 7","Text of this task"));
+        tasks.add(new Task("Task 8","Text of this task"));
+        tasks.add(new Task("Task 9","Text of this task"));
+        tasks.add(new Task("Task 10","Text of this task"));
+        tasks.add(new Task("Task 11","Text of this task"));
+        tasks.add(new Task("Task 12","Text of this task"));
+        tasks.add(new Task("Task 13","Text of this task"));
+        tasks.add(new Task("Task 14","Text of this task"));
+        tasks.add(new Task("Task 15","Text of this task"));
+        tasks.add(new Task("Task 16","Text of this task"));
+        tasks.add(new Task("Task 17","Text of this task"));
         return tasks;
     }
 
