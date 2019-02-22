@@ -40,7 +40,7 @@ public class TaskViewHolder extends RecyclerView.ViewHolder {
         title.setText(task.getTitle());
         Picasso.get().load("http://i.imgur.com/"+task.getImageURI()+".jpg").resize(150, 150)
                 .centerCrop().into(imageView);
-        taskId=task.getImageURI();
+        taskId= Integer.getInteger( task.getImageURI());
 
     }
 }
