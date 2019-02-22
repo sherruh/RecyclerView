@@ -12,12 +12,13 @@ import android.view.View;
 
 import com.example.recyclerview.R;
 import com.example.recyclerview.adapters.TaskAdapter;
+import com.example.recyclerview.interfaces.IOnClickListener;
 import com.example.recyclerview.models.Task;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements IOnClickListener {
 
     RecyclerView tasksList;
     TaskAdapter taskAdapter;
@@ -103,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
     void initRecycler(List<Task> tasks){
         layoutManager=new LinearLayoutManager(this);
-        taskAdapter=new TaskAdapter(tasks);
+        taskAdapter=new TaskAdapter(tasks,this);
         tasksList=findViewById(R.id.tasksRecyler);
         tasksList.setAdapter(taskAdapter);
         tasksList.setLayoutManager(layoutManager);
@@ -112,5 +113,10 @@ public class MainActivity extends AppCompatActivity {
     public void onAddNewTask(View v){
         Intent intent=new Intent(this,Activity2.class);
         startActivityForResult(intent,1);
+    }
+
+    @Override
+    public void clickOn(int taskId) {
+        Log.d("CLickOnViewHolder","task id: "+taskId);
     }
 }
