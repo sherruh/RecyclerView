@@ -38,11 +38,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull TaskViewHolder taskViewHolder, int i) {
-
-        if(i>=tasks.size()-1){
-            i=i%tasks.size();
-        }
-        taskViewHolder.onBind(tasks.get(i));
+        taskViewHolder.onBind(tasks.get(i%tasks.size()));
         Log.d("ololo","onBind "+i);
     }
 
